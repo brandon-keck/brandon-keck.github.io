@@ -175,8 +175,43 @@
   .tech-icon{
     background:#F3F5F6; border:1px solid #D8DDE1; border-radius:8px; padding:10px 12px;
     display:inline-flex; align-items:center; justify-content:center;
+    position:relative;
   }
   .tech-icons i, .tech-icons img{font-size:1.7rem; height:26px; width:auto;}
+
+  .tech-icon::after{
+    content:attr(data-tooltip);
+    position:absolute;
+    bottom:calc(100% + 9px);
+    left:50%;
+    transform:translateX(-50%) translateY(4px);
+    background:var(--card);
+    color:var(--ink);
+    font-size:0.75rem;
+    font-weight:500;
+    padding:5px 10px;
+    border-radius:4px;
+    border:1px solid var(--line);
+    white-space:nowrap;
+    opacity:0;
+    pointer-events:none;
+    transition:opacity 0.15s ease, transform 0.15s ease;
+    z-index:10;
+  }
+  .tech-icon::before{
+    content:"";
+    position:absolute;
+    bottom:calc(100% + 4px);
+    left:50%;
+    transform:translateX(-50%);
+    border:5px solid transparent;
+    border-top-color:var(--line);
+    opacity:0;
+    transition:opacity 0.15s ease;
+    z-index:10;
+  }
+  .tech-icon:hover::after, .tech-icon:focus-visible::after{opacity:1; transform:translateX(-50%) translateY(0);}
+  .tech-icon:hover::before, .tech-icon:focus-visible::before{opacity:1;}
 
   footer{
     border-top:1px solid var(--line);
@@ -294,40 +329,40 @@
       <div class="tech-section">
         <h4 class="tech-title">Languages</h4>
         <div class="tech-icons">
-          <span class="tech-icon" title="Python"><i class="devicon-python-plain colored"></i></span>
-          <span class="tech-icon" title="R"><i class="devicon-r-plain colored"></i></span>
-          <span class="tech-icon" title="SQL"><i class="devicon-azuresqldatabase-plain colored"></i></span>
-          <span class="tech-icon" title="SAS"><img src="assets/css/images/home_imgs/SAS_logo.png" alt="SAS"></span>
+          <span class="tech-icon" data-tooltip="Python" aria-label="Python" tabindex="0"><i class="devicon-python-plain colored"></i></span>
+          <span class="tech-icon" data-tooltip="R" aria-label="R" tabindex="0"><i class="devicon-r-plain colored"></i></span>
+          <span class="tech-icon" data-tooltip="SQL" aria-label="SQL" tabindex="0"><i class="devicon-azuresqldatabase-plain colored"></i></span>
+          <span class="tech-icon" data-tooltip="SAS" aria-label="SAS" tabindex="0"><img src="assets/css/images/home_imgs/SAS_logo.png" alt="SAS"></span>
         </div>
       </div>
 
       <div class="tech-section">
         <h4 class="tech-title">Analytics &amp; ML</h4>
         <div class="tech-icons">
-          <span class="tech-icon" title="Pandas"><i class="devicon-pandas-plain colored"></i></span>
-          <span class="tech-icon" title="Scikit-learn"><i class="devicon-scikitlearn-plain colored"></i></span>
-          <span class="tech-icon" title="NumPy"><img src="assets/css/images/home_imgs/numpylogo.png" alt="NumPy"></span>
-          <span class="tech-icon" title="R (tidyverse / modeling)"><img src="assets/css/images/home_imgs/logo-7.png" alt="Tidyverse"></span>
+          <span class="tech-icon" data-tooltip="Pandas" aria-label="Pandas" tabindex="0"><i class="devicon-pandas-plain colored"></i></span>
+          <span class="tech-icon" data-tooltip="Scikit-learn" aria-label="Scikit-learn" tabindex="0"><i class="devicon-scikitlearn-plain colored"></i></span>
+          <span class="tech-icon" data-tooltip="NumPy" aria-label="NumPy" tabindex="0"><img src="assets/css/images/home_imgs/numpylogo.png" alt="NumPy"></span>
+          <span class="tech-icon" data-tooltip="R (tidyverse / modeling)" aria-label="R (tidyverse / modeling)" tabindex="0"><img src="assets/css/images/home_imgs/logo-7.png" alt="Tidyverse"></span>
         </div>
       </div>
 
       <div class="tech-section">
         <h4 class="tech-title">Visualization</h4>
         <div class="tech-icons">
-          <span class="tech-icon" title="Plotly"><i class="devicon-plotly-plain colored"></i></span>
-          <span class="tech-icon" title="Matplotlib"><i class="devicon-matplotlib-plain colored"></i></span>
-          <span class="tech-icon" title="ggplot2"><img src="assets/css/images/home_imgs/ggplot_logo.png" alt="ggplot2"></span>
-          <span class="tech-icon" title="Tableau"><img src="assets/css/images/home_imgs/tableau_logo.png" alt="Tableau"></span>
-          <span class="tech-icon" title="Seaborn"><img src="assets/css/images/home_imgs/Logo-seaborn.png" alt="Seaborn"></span>
+          <span class="tech-icon" data-tooltip="Plotly" aria-label="Plotly" tabindex="0"><i class="devicon-plotly-plain colored"></i></span>
+          <span class="tech-icon" data-tooltip="Matplotlib" aria-label="Matplotlib" tabindex="0"><i class="devicon-matplotlib-plain colored"></i></span>
+          <span class="tech-icon" data-tooltip="ggplot2" aria-label="ggplot2" tabindex="0"><img src="assets/css/images/home_imgs/ggplot_logo.png" alt="ggplot2"></span>
+          <span class="tech-icon" data-tooltip="Tableau" aria-label="Tableau" tabindex="0"><img src="assets/css/images/home_imgs/tableau_logo.png" alt="Tableau"></span>
+          <span class="tech-icon" data-tooltip="Seaborn" aria-label="Seaborn" tabindex="0"><img src="assets/css/images/home_imgs/Logo-seaborn.png" alt="Seaborn"></span>
         </div>
       </div>
 
       <div class="tech-section">
         <h4 class="tech-title">Tools</h4>
         <div class="tech-icons">
-          <span class="tech-icon" title="Git &amp; GitHub"><i class="devicon-github-original colored"></i></span>
-          <span class="tech-icon" title="Jupyter"><i class="devicon-jupyter-plain colored"></i></span>
-          <span class="tech-icon" title="VS Code"><i class="devicon-vscode-plain colored"></i></span>
+          <span class="tech-icon" data-tooltip="Git &amp; GitHub" aria-label="Git &amp; GitHub" tabindex="0"><i class="devicon-github-original colored"></i></span>
+          <span class="tech-icon" data-tooltip="Jupyter" aria-label="Jupyter" tabindex="0"><i class="devicon-jupyter-plain colored"></i></span>
+          <span class="tech-icon" data-tooltip="VS Code" aria-label="VS Code" tabindex="0"><i class="devicon-vscode-plain colored"></i></span>
         </div>
       </div>
 
