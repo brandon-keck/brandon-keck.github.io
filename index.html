@@ -424,59 +424,99 @@
      Education
      ========================= */
 
-  /* Education */
-.edu-grid{
+ /* =========================
+   Education
+   ========================= */
+
+.education-grid{
   display:grid;
   grid-template-columns:1fr 1fr;
   gap:32px;
 }
 
 @media (max-width:720px){
-  .edu-grid{
+  .education-grid{
     grid-template-columns:1fr;
   }
 }
 
-.edu-tile{
+.education-section{
   text-align:center;
   background:var(--card);
   border:1px solid var(--line);
   border-radius:8px;
-  padding:18px;
+  padding:24px;
 }
 
-.edu-photos{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:12px;
-  align-items:center;
+.education-section h3{
+  font-family:var(--serif);
+  font-weight:500;
+  font-size:1.25rem;
+  margin:0 0 18px;
 }
 
-.edu-photos img{
-  width:100%;
-  height:220px;
-  object-fit:contain;
+.education-section h5{
+  font-family:var(--serif);
+  font-weight:500;
+  font-size:1rem;
+  margin:14px 0 10px;
+  color:var(--ink);
+}
+
+/* Graduation photos */
+
+.grad-photo{
   display:block;
+  width:100%;
+  max-width:360px;
+  height:260px;
+  object-fit:cover;
+  object-position:center;
+  margin:0 auto 18px;
+  border-radius:6px;
+  border:1px solid var(--line);
+}
+
+/* Degree / diploma images */
+
+.degree-photo{
+  display:block;
+  width:100%;
+  max-width:250px;
+  height:175px;
+  object-fit:contain;
+  margin:0 auto;
+  padding:8px;
   background:#fff;
   border:1px solid var(--line);
   border-radius:6px;
 }
 
-.edu-caption{
-  margin-top:16px;
+/* Keeps degree area centered */
+
+.degree-container{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
 }
 
-.edu-caption .school{
-  font-family:var(--serif);
-  font-size:1.1rem;
-}
+@media (max-width:480px){
 
-.edu-caption .degree{
-  color:var(--ink-soft);
-  font-size:0.9rem;
-  margin-top:3px;
-}
+  .education-section{
+    padding:18px;
+  }
 
+  .grad-photo{
+    max-width:100%;
+    height:230px;
+  }
+
+  .degree-photo{
+    max-width:220px;
+    height:155px;
+  }
+
+}
 
   /* =========================
      Technical Skills
