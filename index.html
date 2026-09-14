@@ -3,12 +3,18 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
 <title>Brandon Keck — Portfolio</title>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+
 <style>
+
   :root{
     --bg:#0D1117;
     --navbg:#05070B;
@@ -21,8 +27,14 @@
     --sans:'IBM Plex Sans', -apple-system, sans-serif;
   }
 
-  *{box-sizing:border-box;}
-  html{scroll-behavior:smooth;}
+  *{
+    box-sizing:border-box;
+  }
+
+  html{
+    scroll-behavior:smooth;
+  }
+
   body{
     margin:0;
     background:var(--bg);
@@ -31,56 +43,161 @@
     line-height:1.6;
   }
 
-  a{color:inherit; text-decoration:none;}
+  a{
+    color:inherit;
+    text-decoration:none;
+  }
 
-  .wrap{max-width:960px; margin:0 auto; padding:0 24px;}
+  .wrap{
+    max-width:960px;
+    margin:0 auto;
+    padding:0 24px;
+  }
 
-  /* Nav */
+
+  /* =========================
+     Navigation
+     ========================= */
+
   header{
-    position:sticky; top:0; z-index:50;
+    position:sticky;
+    top:0;
+    z-index:50;
     background:var(--navbg);
   }
+
   nav.wrap{
-    display:flex; align-items:center; justify-content:space-between;
-    padding-top:16px; padding-bottom:16px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding-top:16px;
+    padding-bottom:16px;
   }
-  .brand{font-family:var(--serif); font-size:1.15rem; font-weight:500; color:#fff;}
-  .navlinks{display:flex; gap:28px; font-size:0.95rem;}
-  .navlinks a{position:relative; padding-bottom:4px; color:#9AA6B2;}
-  .navlinks a.active{color:var(--teal);}
+
+  .brand{
+    font-family:var(--serif);
+    font-size:1.15rem;
+    font-weight:500;
+    color:#fff;
+  }
+
+  .navlinks{
+    display:flex;
+    gap:28px;
+    font-size:0.95rem;
+  }
+
+  .navlinks a{
+    position:relative;
+    padding-bottom:4px;
+    color:#9AA6B2;
+  }
+
+  .navlinks a.active{
+    color:var(--teal);
+  }
+
   .navlinks a.active::after{
-    content:""; position:absolute; left:0; right:0; bottom:0; height:2px; background:var(--teal);
+    content:"";
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:0;
+    height:2px;
+    background:var(--teal);
   }
-  .navlinks a:hover{color:#fff;}
-  .navtoggle{display:none; background:none; border:none; font-size:1.4rem; cursor:pointer; color:#fff;}
+
+  .navlinks a:hover{
+    color:#fff;
+  }
+
+  .navtoggle{
+    display:none;
+    background:none;
+    border:none;
+    font-size:1.4rem;
+    cursor:pointer;
+    color:#fff;
+  }
+
+
+  /* Mobile Navigation */
 
   @media (max-width:720px){
+
     .navlinks{
-      display:none; position:absolute; top:100%; left:0; right:0;
-      flex-direction:column; gap:0; background:var(--navbg);
+      display:none;
+      position:absolute;
+      top:100%;
+      left:0;
+      right:0;
+      flex-direction:column;
+      gap:0;
+      background:var(--navbg);
       border-top:1px solid #1B2534;
     }
-    .navlinks.open{display:flex;}
-    .navlinks a{padding:14px 24px; border-top:1px solid #1B2534;}
-    .navtoggle{display:block;}
+
+    .navlinks.open{
+      display:flex;
+    }
+
+    .navlinks a{
+      padding:14px 24px;
+      border-top:1px solid #1B2534;
+    }
+
+    .navtoggle{
+      display:block;
+    }
+
   }
 
-  /* Hero */
+
+  /* =========================
+     Hero
+     ========================= */
+
   .hero{
     padding:64px 0 48px;
     display:grid;
-    grid-template-columns: 1.15fr 0.85fr;
+    grid-template-columns:1.15fr 0.85fr;
     gap:40px;
     align-items:center;
   }
-  @media (max-width:820px){ .hero{grid-template-columns:1fr; text-align:center;} }
+
+  @media (max-width:820px){
+
+    .hero{
+      grid-template-columns:1fr;
+      text-align:center;
+    }
+
+  }
 
   .eyebrow-role{
-    font-size:1.15rem; color:var(--ink-soft); margin-bottom:6px;
+    font-size:1.15rem;
+    color:var(--ink-soft);
+    margin-bottom:6px;
   }
-  #typed-output{color:var(--teal); font-weight:600;}
-  .cursor{display:inline-block; width:2px; background:var(--teal); margin-left:2px; animation:blink 1s steps(1) infinite;}
-  @keyframes blink{50%{opacity:0;}}
+
+  #typed-output{
+    color:var(--teal);
+    font-weight:600;
+  }
+
+  .cursor{
+    display:inline-block;
+    width:2px;
+    background:var(--teal);
+    margin-left:2px;
+    animation:blink 1s steps(1) infinite;
+  }
+
+  @keyframes blink{
+    50%{
+      opacity:0;
+    }
+  }
 
   h1.name{
     font-family:var(--serif);
@@ -90,94 +207,321 @@
     margin:0 0 18px;
   }
 
-  .hero-line{max-width:46ch; color:var(--ink-soft); font-size:1.05rem; margin-bottom:28px;}
-  @media (max-width:820px){ .hero-line{margin-left:auto; margin-right:auto;} }
+  .hero-line{
+    max-width:46ch;
+    color:var(--ink-soft);
+    font-size:1.05rem;
+    margin-bottom:28px;
+  }
 
-  .hero-cta{display:flex; gap:20px; font-size:0.95rem;}
-  @media (max-width:820px){ .hero-cta{justify-content:center;} }
-  .hero-cta a{border-bottom:1px solid var(--ink-soft); padding-bottom:2px;}
-  .hero-cta a.primary{color:var(--teal); border-color:var(--teal); font-weight:600;}
-  .hero-cta a:hover{border-color:var(--ink);}
+  @media (max-width:820px){
+
+    .hero-line{
+      margin-left:auto;
+      margin-right:auto;
+    }
+
+  }
+
+  .hero-cta{
+    display:flex;
+    gap:20px;
+    font-size:0.95rem;
+  }
+
+  @media (max-width:820px){
+
+    .hero-cta{
+      justify-content:center;
+    }
+
+  }
+
+  .hero-cta a{
+    border-bottom:1px solid var(--ink-soft);
+    padding-bottom:2px;
+  }
+
+  .hero-cta a.primary{
+    color:var(--teal);
+    border-color:var(--teal);
+    font-weight:600;
+  }
+
+  .hero-cta a:hover{
+    border-color:var(--ink);
+  }
 
   .hero-photo{
-    width:100%; aspect-ratio:1/1; border-radius:50%;
-    object-fit:cover; border:4px solid var(--teal);
+    width:100%;
+    aspect-ratio:1/1;
+    border-radius:50%;
+    object-fit:cover;
+    border:4px solid var(--teal);
     box-shadow:0 0 0 8px rgba(0,191,165,0.14);
   }
-  @media (max-width:820px){ .hero-photo{max-width:260px; margin:0 auto;} }
 
-  hr.rule{border:none; border-top:1px solid var(--line); margin:8px 0 56px;}
+  @media (max-width:820px){
 
-  section{padding-bottom:64px;}
+    .hero-photo{
+      max-width:260px;
+      margin:0 auto;
+    }
+
+  }
+
+
+  /* =========================
+     General Sections
+     ========================= */
+
+  hr.rule{
+    border:none;
+    border-top:1px solid var(--line);
+    margin:8px 0 56px;
+  }
+
+  section{
+    padding-bottom:64px;
+  }
+
   h2.section-title{
-    font-family:var(--serif); font-weight:500; font-size:1.6rem; margin:0 0 8px;
+    font-family:var(--serif);
+    font-weight:500;
+    font-size:1.6rem;
+    margin:0 0 8px;
     text-align:center;
   }
-  p.section-lead{color:var(--ink-soft); font-size:0.95rem; max-width:56ch; margin:0 auto 28px; text-align:center;}
 
-  /* Featured work */
-  .work-grid{display:grid; grid-template-columns:1fr 1fr; gap:24px;}
-  @media (max-width:720px){ .work-grid{grid-template-columns:1fr;} }
+  p.section-lead{
+    color:var(--ink-soft);
+    font-size:0.95rem;
+    max-width:56ch;
+    margin:0 auto 28px;
+    text-align:center;
+  }
+
+
+  /* =========================
+     Featured Work
+     ========================= */
+
+  .work-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:24px;
+  }
+
+  @media (max-width:720px){
+
+    .work-grid{
+      grid-template-columns:1fr;
+    }
+
+  }
 
   .work-card{
-    display:block; border:1px solid var(--line); background:var(--card);
+    display:block;
+    border:1px solid var(--line);
+    background:var(--card);
     transition:border-color 0.15s ease, box-shadow 0.15s ease;
   }
-  .work-card:hover{border-color:var(--teal); box-shadow:0 4px 16px rgba(0,191,165,0.18);}
-  .work-card img{width:100%; display:block; border-bottom:1px solid var(--line);}
-  .work-card .body{padding:18px 20px;}
-  .work-card h3{font-family:var(--serif); font-weight:500; font-size:1.15rem; margin:0 0 8px;}
-  .work-card p{font-size:0.9rem; color:var(--ink-soft); margin:0 0 10px;}
-  .work-card .meta{font-size:0.8rem; color:var(--teal); font-weight:600;}
 
-  .more-work{margin-top:20px; font-size:0.9rem; text-align:center;}
-  .more-work a{border-bottom:1px solid var(--ink-soft);}
-  .more-work a:hover{border-color:var(--ink);}
+  .work-card:hover{
+    border-color:var(--teal);
+    box-shadow:0 4px 16px rgba(0,191,165,0.18);
+  }
 
-  /* About */
-  .about-grid{display:grid; grid-template-columns:1.3fr 0.7fr; gap:40px;}
-  @media (max-width:720px){ .about-grid{grid-template-columns:1fr;} }
-  .about-grid p{color:var(--ink-soft); max-width:56ch;}
+  .work-card img{
+    width:100%;
+    display:block;
+    border-bottom:1px solid var(--line);
+  }
+
+  .work-card .body{
+    padding:18px 20px;
+  }
+
+  .work-card h3{
+    font-family:var(--serif);
+    font-weight:500;
+    font-size:1.15rem;
+    margin:0 0 8px;
+  }
+
+  .work-card p{
+    font-size:0.9rem;
+    color:var(--ink-soft);
+    margin:0 0 10px;
+  }
+
+  .work-card .meta{
+    font-size:0.8rem;
+    color:var(--teal);
+    font-weight:600;
+  }
+
+  .more-work{
+    margin-top:20px;
+    font-size:0.9rem;
+    text-align:center;
+  }
+
+  .more-work a{
+    border-bottom:1px solid var(--ink-soft);
+  }
+
+  .more-work a:hover{
+    border-color:var(--ink);
+  }
+
+
+  /* =========================
+     About
+     ========================= */
+
+  .about-grid{
+    display:grid;
+    grid-template-columns:1.3fr 0.7fr;
+    gap:40px;
+  }
+
+  @media (max-width:720px){
+
+    .about-grid{
+      grid-template-columns:1fr;
+    }
+
+  }
+
+  .about-grid p{
+    color:var(--ink-soft);
+    max-width:56ch;
+  }
 
   .facts{
-    display:flex; flex-direction:column; gap:10px;
+    display:flex;
+    flex-direction:column;
+    gap:10px;
     font-size:0.92rem;
     border-left:2px solid var(--teal);
     padding-left:16px;
     height:fit-content;
   }
-  .facts div{display:flex; gap:8px;}
-  .facts span.k{color:var(--ink-soft); min-width:80px;}
 
-  /* Education */
+  .facts div{
+    display:flex;
+    gap:8px;
+  }
+
+  .facts span.k{
+    color:var(--ink-soft);
+    min-width:80px;
+  }
+
+
+  /* =========================
+     Education
+     ========================= */
+
   .edu-grid{
-    display:grid; grid-template-columns:1fr 1fr; gap:28px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:28px;
   }
-  @media (max-width:720px){ .edu-grid{grid-template-columns:1fr;} }
 
-  .edu-tile{text-align:center;}
+  @media (max-width:720px){
+
+    .edu-grid{
+      grid-template-columns:1fr;
+    }
+
+  }
+
+  .edu-tile{
+    text-align:center;
+  }
+
   .edu-tile img{
-    width:100%; display:block; border:1px solid var(--line); border-radius:6px;
+    width:100%;
+    display:block;
+    border:1px solid var(--line);
+    border-radius:6px;
   }
-  .edu-caption{margin-top:12px;}
-  .edu-caption .school{font-family:var(--serif); font-size:1.05rem;}
-  .edu-caption .degree{color:var(--ink-soft); font-size:0.9rem; margin-top:2px;}
 
-  /* Technical Skills — original 4-column layout */
+  .edu-caption{
+    margin-top:12px;
+  }
+
+  .edu-caption .school{
+    font-family:var(--serif);
+    font-size:1.05rem;
+  }
+
+  .edu-caption .degree{
+    color:var(--ink-soft);
+    font-size:0.9rem;
+    margin-top:2px;
+  }
+
+
+  /* =========================
+     Technical Skills
+     ========================= */
+
   .skills-grid{
-    display:grid; grid-template-columns:repeat(4, 1fr); gap:32px; text-align:center;
+    display:grid;
+    grid-template-columns:repeat(4, 1fr);
+    gap:32px;
+    text-align:center;
   }
-  @media (max-width:820px){ .skills-grid{grid-template-columns:repeat(2, 1fr);} }
-  @media (max-width:480px){ .skills-grid{grid-template-columns:1fr;} }
 
-  .tech-title{font-size:1rem; font-weight:600; margin-bottom:16px;}
-  .tech-icons{display:flex; flex-wrap:wrap; justify-content:center; gap:12px;}
+  @media (max-width:820px){
+
+    .skills-grid{
+      grid-template-columns:repeat(2, 1fr);
+    }
+
+  }
+
+  @media (max-width:480px){
+
+    .skills-grid{
+      grid-template-columns:1fr;
+    }
+
+  }
+
+  .tech-title{
+    font-size:1rem;
+    font-weight:600;
+    margin-bottom:16px;
+  }
+
+  .tech-icons{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:12px;
+  }
+
   .tech-icon{
-    background:#F3F5F6; border:1px solid #D8DDE1; border-radius:8px; padding:10px 12px;
-    display:inline-flex; align-items:center; justify-content:center;
+    background:#F3F5F6;
+    border:1px solid #D8DDE1;
+    border-radius:8px;
+    padding:10px 12px;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
     position:relative;
   }
-  .tech-icons i, .tech-icons img{font-size:1.7rem; height:26px; width:auto;}
+
+  .tech-icons i,
+  .tech-icons img{
+    font-size:1.7rem;
+    height:26px;
+    width:auto;
+  }
 
   .tech-icon::after{
     content:attr(data-tooltip);
@@ -198,6 +542,7 @@
     transition:opacity 0.15s ease, transform 0.15s ease;
     z-index:10;
   }
+
   .tech-icon::before{
     content:"";
     position:absolute;
@@ -210,201 +555,648 @@
     transition:opacity 0.15s ease;
     z-index:10;
   }
-  .tech-icon:hover::after, .tech-icon:focus-visible::after{opacity:1; transform:translateX(-50%) translateY(0);}
-  .tech-icon:hover::before, .tech-icon:focus-visible::before{opacity:1;}
+
+  .tech-icon:hover::after,
+  .tech-icon:focus-visible::after{
+    opacity:1;
+    transform:translateX(-50%) translateY(0);
+  }
+
+  .tech-icon:hover::before,
+  .tech-icon:focus-visible::before{
+    opacity:1;
+  }
+
+
+  /* =========================
+     Footer
+     ========================= */
 
   footer{
     border-top:1px solid var(--line);
-    padding:32px 0; font-size:0.85rem; color:var(--ink-soft); text-align:center;
+    padding:32px 0;
+    font-size:0.85rem;
+    color:var(--ink-soft);
+    text-align:center;
   }
+
 </style>
 </head>
+
+
 <body>
 
+
 <header>
+
   <nav class="wrap">
-    <a class="brand" href="index.html">Brandon Keck's Portfolio</a>
-    <button class="navtoggle" id="navtoggle" aria-label="Toggle navigation">&#9776;</button>
+
+    <a class="brand" href="index.html">
+      Brandon Keck's Portfolio
+    </a>
+
+    <button
+      class="navtoggle"
+      id="navtoggle"
+      aria-label="Toggle navigation">
+      &#9776;
+    </button>
+
     <div class="navlinks" id="navlinks">
+
       <a class="active" href="index.html">Home</a>
+
       <a href="employment.html">Experience</a>
+
       <a href="projects.html">Projects</a>
+
       <a href="visualizations.html">Visualization</a>
+
       <a href="contact.html">Contact</a>
+
     </div>
+
   </nav>
+
 </header>
+
 
 <div class="wrap">
 
+
+  <!-- =========================
+       Hero
+       ========================= -->
+
   <section class="hero">
+
     <div>
-      <div class="eyebrow-role">I'm a <span id="typed-output"></span><span class="cursor">&nbsp;</span></div>
-      <h1 class="name">Brandon Keck</h1>
+
+      <div class="eyebrow-role">
+        I'm a
+        <span id="typed-output"></span>
+        <span class="cursor">&nbsp;</span>
+      </div>
+
+      <h1 class="name">
+        Brandon Keck
+      </h1>
+
       <p class="hero-line">
         I turn messy, real-world datasets into models and visuals people can actually act on.
       </p>
+
       <div class="hero-cta">
-        <a class="primary" href="#work">See featured work</a>
-        <a href="contact.html">Get in touch</a>
+
+        <a class="primary" href="#work">
+          See featured work
+        </a>
+
+        <a href="contact.html">
+          Get in touch
+        </a>
+
       </div>
+
     </div>
 
-    <img class="hero-photo" src="assets/css/images/home_imgs/BKGrad.png" alt="Brandon Keck">
+
+    <img
+      class="hero-photo"
+      src="assets/css/images/home_imgs/BKGrad.png"
+      alt="Brandon Keck">
+
   </section>
+
 
   <hr class="rule">
 
+
+  <!-- =========================
+       Selected Work
+       ========================= -->
+
   <section id="work">
-    <h2 class="section-title">Selected Work</h2>
-    <p class="section-lead">Two recent projects — one predicting survival on the Titanic, one predicting fantasy baseball value from real MLB data.</p>
+
+    <h2 class="section-title">
+      Selected Work
+    </h2>
+
+    <p class="section-lead">
+      Two recent projects — one predicting survival on the Titanic,
+      one predicting fantasy baseball value from real MLB data.
+    </p>
+
 
     <div class="work-grid">
-      <a class="work-card" href="https://github.com/brandon-keck/titanic-survival-prediction" target="_blank" rel="noopener noreferrer">
-        <img src="assets/css/images/home_imgs/Titanic.png" alt="ROC curves comparing six models on the Titanic dataset">
+
+
+      <a
+        class="work-card"
+        href="https://github.com/brandon-keck/titanic-survival-prediction"
+        target="_blank"
+        rel="noopener noreferrer">
+
+        <img
+          src="assets/css/images/home_imgs/Titanic.png"
+          alt="ROC curves comparing six models on the Titanic dataset">
+
         <div class="body">
-          <h3>Titanic Survival Prediction</h3>
-          <p>Six models compared head-to-head, with a tuned Random Forest coming out on top — 83.7% validation accuracy, 0.890 AUC.</p>
-          <span class="meta">Python, scikit-learn, XGBoost</span>
+
+          <h3>
+            Titanic Survival Prediction
+          </h3>
+
+          <p>
+            Six models compared head-to-head, with a tuned Random Forest
+            coming out on top — 83.7% validation accuracy, 0.890 AUC.
+          </p>
+
+          <span class="meta">
+            Python, scikit-learn, XGBoost
+          </span>
+
         </div>
+
       </a>
 
-      <a class="work-card" href="https://github.com/brandonkeck/CS385_Project" target="_blank" rel="noopener noreferrer">
-        <img src="assets/css/images/home_imgs/Heatmap.png" alt="Feature correlation heatmap from the MLB ROTO project">
+
+      <a
+        class="work-card"
+        href="https://github.com/brandonkeck/CS385_Project"
+        target="_blank"
+        rel="noopener noreferrer">
+
+        <img
+          src="assets/css/images/home_imgs/Heatmap.png"
+          alt="Feature correlation heatmap from the MLB ROTO project">
+
         <div class="body">
-          <h3>MLB ROTO Score Prediction</h3>
-          <p>A full ML pipeline predicting fantasy baseball value from 2022 batting data, reaching an R² of 0.987.</p>
-          <span class="meta">Python, scikit-learn</span>
+
+          <h3>
+            MLB ROTO Score Prediction
+          </h3>
+
+          <p>
+            A full ML pipeline predicting fantasy baseball value from
+            2022 batting data, reaching an R² of 0.987.
+          </p>
+
+          <span class="meta">
+            Python, scikit-learn
+          </span>
+
         </div>
+
       </a>
+
+
     </div>
 
-    <p class="more-work"><a href="projects.html">See all projects</a></p>
+
+    <p class="more-work">
+      <a href="projects.html">
+        See all projects
+      </a>
+    </p>
+
   </section>
+
+
+  <!-- =========================
+       About Me
+       ========================= -->
 
   <section id="about">
-    <h2 class="section-title">About Me</h2>
+
+    <h2 class="section-title">
+      About Me
+    </h2>
+
+
     <div class="about-grid">
+
       <p>
-        Statistics is how I make sense of noisy, real-world problems — sports outcomes,
-        environmental burden, cocoa ratings, whatever the dataset throws at me next.
-        I hold a B.S. in Statistics (minor in Mathematics) from Sonoma State University and
-        an M.S. in Data Science from CSU East Bay, and I spend most of my time in R, Python, SQL,
-        Power BI, and Tableau — moving from raw numbers to a model or a chart someone can actually
-        act on.
+        Statistics is how I make sense of noisy, real-world problems —
+        sports outcomes, environmental burden, cocoa ratings, whatever
+        the dataset throws at me next.
+
+        I hold a B.S. in Statistics (minor in Mathematics) from Sonoma
+        State University and an M.S. in Data Science from CSU East Bay,
+        and I spend most of my time in R, Python, SQL, Power BI, and
+        Tableau — moving from raw numbers to a model or a chart someone
+        can actually act on.
       </p>
+
+
       <div class="facts">
-        <div><span class="k">Based in</span><span>California</span></div>
-        <div><span class="k">Focus</span><span>Applied statistics &amp; data visualization</span></div>
-        <div><span class="k">Tools</span><span>R, Python, SQL, Power BI, Tableau</span></div>
+
+        <div>
+          <span class="k">Based in</span>
+          <span>California</span>
+        </div>
+
+        <div>
+          <span class="k">Focus</span>
+          <span>Applied statistics &amp; data visualization</span>
+        </div>
+
+        <div>
+          <span class="k">Tools</span>
+          <span>R, Python, SQL, Power BI, Tableau</span>
+        </div>
+
       </div>
+
     </div>
+
   </section>
 
+
+  <!-- =========================
+       Education
+       ========================= -->
+
   <section>
-    <h2 class="section-title">Education</h2>
+
+    <h2 class="section-title">
+      Education
+    </h2>
+
+
     <div class="edu-grid">
+
+
+      <!-- Bachelor's Degree -->
+
       <div class="edu-tile">
-        <img src="assets/css/images/home_imgs/Sonoma_grad_compressed.jpg" alt="Sonoma State Graduation">
+
+        <img
+          src="assets/css/images/home_imgs/BS.png"
+          alt="Bachelor of Science in Statistics degree from Sonoma State University">
+
         <div class="edu-caption">
-          <div class="school">Sonoma State University</div>
-          <div class="degree">B.S. Statistics, Minor in Mathematics · 2024</div>
+
+          <div class="school">
+            Sonoma State University
+          </div>
+
+          <div class="degree">
+            B.S. Statistics, Minor in Mathematics · 2024
+          </div>
+
         </div>
+
       </div>
+
+
+      <!-- Master's Degree -->
+
       <div class="edu-tile">
-        <img src="assets/css/images/home_imgs/EastBayGrad.png" alt="CSU East Bay Graduation">
+
+        <img
+          src="assets/css/images/home_imgs/M.S.Stats.png"
+          alt="Master's degree from CSU East Bay">
+
         <div class="edu-caption">
-          <div class="school">CSU East Bay</div>
-          <div class="degree">M.S. Data Science · 2026</div>
+
+          <div class="school">
+            CSU East Bay
+          </div>
+
+          <div class="degree">
+            M.S. Data Science · 2026
+          </div>
+
         </div>
+
       </div>
+
+
     </div>
+
   </section>
 
+
+  <!-- =========================
+       Technical Skills
+       ========================= -->
+
   <section>
-    <h2 class="section-title">Technical Skills</h2>
+
+    <h2 class="section-title">
+      Technical Skills
+    </h2>
+
+
     <div class="skills-grid">
 
-      <div class="tech-section">
-        <h4 class="tech-title">Languages</h4>
-        <div class="tech-icons">
-          <span class="tech-icon" data-tooltip="Python" aria-label="Python" tabindex="0"><i class="devicon-python-plain colored"></i></span>
-          <span class="tech-icon" data-tooltip="R" aria-label="R" tabindex="0"><i class="devicon-r-plain colored"></i></span>
-          <span class="tech-icon" data-tooltip="SQL" aria-label="SQL" tabindex="0"><i class="devicon-azuresqldatabase-plain colored"></i></span>
-          <span class="tech-icon" data-tooltip="SAS" aria-label="SAS" tabindex="0"><img src="assets/css/images/home_imgs/SAS_logo.png" alt="SAS"></span>
-        </div>
-      </div>
+
+      <!-- Languages -->
 
       <div class="tech-section">
-        <h4 class="tech-title">Analytics &amp; ML</h4>
+
+        <h4 class="tech-title">
+          Languages
+        </h4>
+
         <div class="tech-icons">
-          <span class="tech-icon" data-tooltip="Pandas" aria-label="Pandas" tabindex="0"><i class="devicon-pandas-plain colored"></i></span>
-          <span class="tech-icon" data-tooltip="Scikit-learn" aria-label="Scikit-learn" tabindex="0"><i class="devicon-scikitlearn-plain colored"></i></span>
-          <span class="tech-icon" data-tooltip="NumPy" aria-label="NumPy" tabindex="0"><img src="assets/css/images/home_imgs/numpylogo.png" alt="NumPy"></span>
-          <span class="tech-icon" data-tooltip="R (tidyverse / modeling)" aria-label="R (tidyverse / modeling)" tabindex="0"><img src="assets/css/images/home_imgs/logo-7.png" alt="Tidyverse"></span>
+
+          <span
+            class="tech-icon"
+            data-tooltip="Python"
+            aria-label="Python"
+            tabindex="0">
+            <i class="devicon-python-plain colored"></i>
+          </span>
+
+          <span
+            class="tech-icon"
+            data-tooltip="R"
+            aria-label="R"
+            tabindex="0">
+            <i class="devicon-r-plain colored"></i>
+          </span>
+
+          <span
+            class="tech-icon"
+            data-tooltip="SQL"
+            aria-label="SQL"
+            tabindex="0">
+            <i class="devicon-azuresqldatabase-plain colored"></i>
+          </span>
+
+          <span
+            class="tech-icon"
+            data-tooltip="SAS"
+            aria-label="SAS"
+            tabindex="0">
+            <img
+              src="assets/css/images/home_imgs/SAS_logo.png"
+              alt="SAS">
+          </span>
+
         </div>
+
       </div>
 
-      <div class="tech-section">
-        <h4 class="tech-title">Visualization</h4>
-        <div class="tech-icons">
-          <span class="tech-icon" data-tooltip="Plotly" aria-label="Plotly" tabindex="0"><i class="devicon-plotly-plain colored"></i></span>
-          <span class="tech-icon" data-tooltip="Matplotlib" aria-label="Matplotlib" tabindex="0"><i class="devicon-matplotlib-plain colored"></i></span>
-          <span class="tech-icon" data-tooltip="ggplot2" aria-label="ggplot2" tabindex="0"><img src="assets/css/images/home_imgs/ggplot_logo.png" alt="ggplot2"></span>
-          <span class="tech-icon" data-tooltip="Tableau" aria-label="Tableau" tabindex="0"><img src="assets/css/images/home_imgs/tableau_logo.png" alt="Tableau"></span>
-          <span class="tech-icon" data-tooltip="Seaborn" aria-label="Seaborn" tabindex="0"><img src="assets/css/images/home_imgs/Logo-seaborn.png" alt="Seaborn"></span>
-        </div>
-      </div>
+
+      <!-- Analytics & ML -->
 
       <div class="tech-section">
-        <h4 class="tech-title">Tools</h4>
+
+        <h4 class="tech-title">
+          Analytics &amp; ML
+        </h4>
+
         <div class="tech-icons">
-          <span class="tech-icon" data-tooltip="Git &amp; GitHub" aria-label="Git &amp; GitHub" tabindex="0"><i class="devicon-github-original colored"></i></span>
-          <span class="tech-icon" data-tooltip="Jupyter" aria-label="Jupyter" tabindex="0"><i class="devicon-jupyter-plain colored"></i></span>
-          <span class="tech-icon" data-tooltip="VS Code" aria-label="VS Code" tabindex="0"><i class="devicon-vscode-plain colored"></i></span>
+
+          <span
+            class="tech-icon"
+            data-tooltip="Pandas"
+            aria-label="Pandas"
+            tabindex="0">
+            <i class="devicon-pandas-plain colored"></i>
+          </span>
+
+          <span
+            class="tech-icon"
+            data-tooltip="Scikit-learn"
+            aria-label="Scikit-learn"
+            tabindex="0">
+            <i class="devicon-scikitlearn-plain colored"></i>
+          </span>
+
+          <span
+            class="tech-icon"
+            data-tooltip="NumPy"
+            aria-label="NumPy"
+            tabindex="0">
+            <img
+              src="assets/css/images/home_imgs/numpylogo.png"
+              alt="NumPy">
+          </span>
+
+          <span
+            class="tech-icon"
+            data-tooltip="R (tidyverse / modeling)"
+            aria-label="R (tidyverse / modeling)"
+            tabindex="0">
+            <img
+              src="assets/css/images/home_imgs/logo-7.png"
+              alt="Tidyverse">
+          </span>
+
         </div>
+
       </div>
+
+
+      <!-- Visualization -->
+
+      <div class="tech-section">
+
+        <h4 class="tech-title">
+          Visualization
+        </h4>
+
+        <div class="tech-icons">
+
+          <span
+            class="tech-icon"
+            data-tooltip="Plotly"
+            aria-label="Plotly"
+            tabindex="0">
+            <i class="devicon-plotly-plain colored"></i>
+          </span>
+
+          <span
+            class="tech-icon"
+            data-tooltip="Matplotlib"
+            aria-label="Matplotlib"
+            tabindex="0">
+            <i class="devicon-matplotlib-plain colored"></i>
+          </span>
+
+          <span
+            class="tech-icon"
+            data-tooltip="ggplot2"
+            aria-label="ggplot2"
+            tabindex="0">
+            <img
+              src="assets/css/images/home_imgs/ggplot_logo.png"
+              alt="ggplot2">
+          </span>
+
+          <span
+            class="tech-icon"
+            data-tooltip="Tableau"
+            aria-label="Tableau"
+            tabindex="0">
+            <img
+              src="assets/css/images/home_imgs/tableau_logo.png"
+              alt="Tableau">
+          </span>
+
+          <span
+            class="tech-icon"
+            data-tooltip="Seaborn"
+            aria-label="Seaborn"
+            tabindex="0">
+            <img
+              src="assets/css/images/home_imgs/Logo-seaborn.png"
+              alt="Seaborn">
+          </span>
+
+        </div>
+
+      </div>
+
+
+      <!-- Tools -->
+
+      <div class="tech-section">
+
+        <h4 class="tech-title">
+          Tools
+        </h4>
+
+        <div class="tech-icons">
+
+          <span
+            class="tech-icon"
+            data-tooltip="Git &amp; GitHub"
+            aria-label="Git &amp; GitHub"
+            tabindex="0">
+            <i class="devicon-github-original colored"></i>
+          </span>
+
+          <span
+            class="tech-icon"
+            data-tooltip="Jupyter"
+            aria-label="Jupyter"
+            tabindex="0">
+            <i class="devicon-jupyter-plain colored"></i>
+          </span>
+
+          <span
+            class="tech-icon"
+            data-tooltip="VS Code"
+            aria-label="VS Code"
+            tabindex="0">
+            <i class="devicon-vscode-plain colored"></i>
+          </span>
+
+        </div>
+
+      </div>
+
 
     </div>
+
   </section>
+
 
 </div>
 
+
+<!-- =========================
+     Footer
+     ========================= -->
+
 <footer>
-  <div class="wrap">© 2026 Brandon Keck</div>
+
+  <div class="wrap">
+    © 2026 Brandon Keck
+  </div>
+
 </footer>
 
+
 <script>
+
+  /* Mobile navigation */
+
   document.getElementById('navtoggle').addEventListener('click', function(){
-    document.getElementById('navlinks').classList.toggle('open');
+
+    document
+      .getElementById('navlinks')
+      .classList
+      .toggle('open');
+
   });
 
-  const roles = ["Data Scientist", "Statistician", "Tableau Developer", "Power BI Developer", "Magic the Gathering Nerd", "Sports Fan"];
+
+  /* Rotating job titles */
+
+  const roles = [
+    "Data Scientist",
+    "Statistician",
+    "Tableau Developer",
+    "Power BI Developer",
+    "Magic the Gathering Nerd",
+    "Sports Fan"
+  ];
+
   const el = document.getElementById('typed-output');
-  let roleIndex = 0, charIndex = 0, deleting = false;
+
+  let roleIndex = 0;
+  let charIndex = 0;
+  let deleting = false;
+
 
   function tick(){
+
     const word = roles[roleIndex];
+
+
     if(!deleting){
+
       charIndex++;
+
       el.textContent = word.slice(0, charIndex);
+
+
       if(charIndex === word.length){
+
         deleting = true;
+
         setTimeout(tick, 1500);
+
         return;
+
       }
-    } else {
+
+    }else{
+
       charIndex--;
+
       el.textContent = word.slice(0, charIndex);
+
+
       if(charIndex === 0){
+
         deleting = false;
+
         roleIndex = (roleIndex + 1) % roles.length;
+
       }
+
     }
-    setTimeout(tick, deleting ? 40 : 70);
+
+
+    setTimeout(
+      tick,
+      deleting ? 40 : 70
+    );
+
   }
+
+
   tick();
+
 </script>
+
 
 </body>
 </html>
