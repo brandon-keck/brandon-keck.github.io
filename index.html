@@ -90,8 +90,22 @@
     margin:0 0 18px;
   }
 
-  .hero-line{max-width:46ch; color:var(--ink-soft); font-size:1.05rem; margin-bottom:28px;}
+  .hero-line{max-width:52ch; color:var(--ink-soft); font-size:1.02rem; margin-bottom:20px;}
   @media (max-width:820px){ .hero-line{margin-left:auto; margin-right:auto;} }
+
+  .hero-facts{
+    display:flex; flex-direction:column; gap:8px;
+    font-size:0.9rem;
+    border-left:2px solid var(--teal);
+    padding-left:16px;
+    margin-bottom:28px;
+  }
+  @media (max-width:820px){
+    .hero-facts{ border-left:none; padding-left:0; align-items:center; }
+  }
+  .hero-facts div{display:flex; gap:8px;}
+  @media (max-width:820px){ .hero-facts div{flex-direction:column; gap:2px;} }
+  .hero-facts span.k{color:var(--ink-soft); min-width:80px;}
 
   .hero-cta{display:flex; gap:20px; font-size:0.95rem;}
   @media (max-width:820px){ .hero-cta{justify-content:center;} }
@@ -133,21 +147,6 @@
   .more-work{margin-top:20px; font-size:0.9rem; text-align:center;}
   .more-work a{border-bottom:1px solid var(--ink-soft);}
   .more-work a:hover{border-color:var(--ink);}
-
-  /* About */
-  .about-grid{display:grid; grid-template-columns:1.3fr 0.7fr; gap:40px;}
-  @media (max-width:720px){ .about-grid{grid-template-columns:1fr;} }
-  .about-grid p{color:var(--ink-soft); max-width:56ch;}
-
-  .facts{
-    display:flex; flex-direction:column; gap:10px;
-    font-size:0.92rem;
-    border-left:2px solid var(--teal);
-    padding-left:16px;
-    height:fit-content;
-  }
-  .facts div{display:flex; gap:8px;}
-  .facts span.k{color:var(--ink-soft); min-width:80px;}
 
   /* Education */
   .education-grid{
@@ -263,8 +262,18 @@
       <div class="eyebrow-role">I'm a <span id="typed-output"></span><span class="cursor">&nbsp;</span></div>
       <h1 class="name">Brandon Keck</h1>
       <p class="hero-line">
-        I turn messy, real-world datasets into models and visuals people can actually act on.
+        Statistics is how I make sense of noisy, real-world problems — sports outcomes,
+        environmental burden, cocoa ratings, whatever the dataset throws at me next.
+        I hold a B.S. in Statistics (minor in Mathematics) from Sonoma State University and
+        an M.S. in Data Science from CSU East Bay, and I spend most of my time in R, Python, SQL,
+        Power BI, and Tableau — moving from raw numbers to a model or a chart someone can actually
+        act on.
       </p>
+      <div class="hero-facts">
+        <div><span class="k">Based in</span><span>California</span></div>
+        <div><span class="k">Focus</span><span>Applied statistics &amp; data visualization</span></div>
+        <div><span class="k">Tools</span><span>R, Python, SQL, Power BI, Tableau</span></div>
+      </div>
       <div class="hero-cta">
         <a class="primary" href="#work">See featured work</a>
         <a href="contact.html">Get in touch</a>
@@ -301,25 +310,6 @@
     </div>
 
     <p class="more-work"><a href="projects.html">See all projects</a></p>
-  </section>
-
-  <section id="about">
-    <h2 class="section-title">About Me</h2>
-    <div class="about-grid">
-      <p>
-        Statistics is how I make sense of noisy, real-world problems — sports outcomes,
-        environmental burden, cocoa ratings, whatever the dataset throws at me next.
-        I hold a B.S. in Statistics (minor in Mathematics) from Sonoma State University and
-        an M.S. in Data Science from CSU East Bay, and I spend most of my time in R, Python, SQL,
-        Power BI, and Tableau — moving from raw numbers to a model or a chart someone can actually
-        act on.
-      </p>
-      <div class="facts">
-        <div><span class="k">Based in</span><span>California</span></div>
-        <div><span class="k">Focus</span><span>Applied statistics &amp; data visualization</span></div>
-        <div><span class="k">Tools</span><span>R, Python, SQL, Power BI, Tableau</span></div>
-      </div>
-    </div>
   </section>
 
   <section>
