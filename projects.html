@@ -143,6 +143,23 @@
 
   <div class="project-list">
 
+    <a class="project-card" href="https://brandon-keck.github.io/cfb-rankings/" target="_blank" rel="noopener noreferrer">
+      <div class="project-inner">
+        <div class="project-content">
+          <h3>CFB Power Ratings <i class="fab fa-python"></i></h3>
+          <ul>
+            <li>Built a full pipeline pulling multi-season game, roster, recruiting-talent, and SP+ data from the CollegeFootballData API into a documented Elo-style rating engine blended with a recruiting talent composite &mdash; an objective alternative to human-voted polls.</li>
+            <li>Backtested predictions against every FBS-vs-FBS game since 2019 using only data available before each game was played (no look-ahead): <strong>71.4% accuracy</strong>, beating a "home team always wins" baseline by <strong>12.6 points</strong> and competitive with SP+ ratings.</li>
+            <li>Automated the entire pipeline with a scheduled GitHub Action that pulls new results, recomputes rankings, and re-validates accuracy every week with no manual intervention.</li>
+            <li>Designed and built a live, dependency-free dashboard (vanilla JS + Chart.js, zero build step) with current rankings, a searchable rating-trajectory chart per team, and live backtest results.</li>
+          </ul>
+          <span class="project-meta">2026 &mdash; Python, GitHub Actions, Chart.js &middot; <a href="https://github.com/brandon-keck/cfb-rankings" target="_blank" rel="noopener noreferrer" style="color:var(--teal); text-decoration:underline;">View source on GitHub</a></span>
+        </div>
+        <div class="project-image">
+          <img src="assets/css/images/home_imgs/CFBRankings.png" alt="CFB Power Ratings dashboard showing backtest accuracy results">
+        </div>
+      </div>
+    </a>
     <a class="project-card" href="https://github.com/brandon-keck/titanic-survival-prediction" target="_blank" rel="noopener noreferrer">
       <div class="project-inner">
         <div class="project-content">
